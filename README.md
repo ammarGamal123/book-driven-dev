@@ -70,7 +70,7 @@ Military service is often seen as a break from one’s career. I’m turning it 
 I’m **Ammar Gamal Mohamed**, a junior .NET developer passionate about clean, maintainable code and high-quality backend APIs.
 
 - 🌐 [LinkedIn](https://www.linkedin.com/in/ammar-hammad/)
-- 📬 Email: [contact.ammarhammad@gmail.com](mailto:contact.dev.ammar@gmail.com)
+- 📬 Email: [contact.dev.ammar@gmail.com](mailto:contact.dev.ammar@gmail.com)
 
 ---
 
