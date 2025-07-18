@@ -1,9 +1,67 @@
-*.exe
-*.dll
-*.obj
-*.pdb
+# === .NET and Visual Studio ===
 bin/
 obj/
-.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+# Rider
 .idea/
+*.sln.iml
+
+# Visual Studio
+.vs/
+.vscode/
+*.dbmdl
+
+# Build Results
+[Dd]ebug*/
+[Rr]elease*/
+x64/
+x86/
+build/
+
+# ASP.NET Stuff
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Others
+*.log
+*.cache
+*.tmp
+*.pid
+*.pid.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# ReSharper
+_ReSharper*/
+*.DotSettings.user
+
+# Rider
+.idea/
+*.sln.iml
+
+# DotCover
+*.dotCover
+
+# Logs
+*.log
+
+# Rider
+.idea/
+
+# Test Results
+TestResults/
+
+# Backup files
+*.bak
+*.swp
+*.swo
 
