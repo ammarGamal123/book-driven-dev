@@ -14,15 +14,14 @@ namespace Repository
         private readonly Lazy<IEmployeeRepository> _employeeRepository;
 
 
-        public RepositoryManager(RepositoryContext repositoryContext,
-                                 Lazy<ICompanyRepository> companyRepository,
-                                 Lazy<IEmployeeRepository> employeeRepository)
+        public RepositoryManager(RepositoryContext repositoryContext)
         {
             _repositoryContext = repositoryContext;
-            _companyRepository = companyRepository;
-            _employeeRepository = employeeRepository;
+            _companyRepository = new Lazy<ICompanyRepository>(() 
+                => new CompanyRepository(repositoryContext));
+            _employeeRepository = new Lazy<IEmployeeRepository>(()
+                => new EmployeeRepository(repositoryContext)); 
         }
-
 
         public ICompanyRepository CompanyRepository => _companyRepository.Value;
 
