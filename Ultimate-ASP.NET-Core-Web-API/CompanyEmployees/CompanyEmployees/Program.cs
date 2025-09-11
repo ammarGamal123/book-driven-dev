@@ -12,8 +12,8 @@ LogManager.Setup().
     );
 
 
-// Add services to the container
-builder.Services.AddControllers();
+/*// Add services to the container
+builder.Services.AddControllers();*/
 
 // custom configuration for service method inside builder
 builder.Services.ConfigureCors();
@@ -22,6 +22,10 @@ builder.Services.ConfigureLoggerService();
 builder.Services.ConfigureRepositoryManager();
 builder.Services.ConfigureServiceManager();
 builder.Services.ConfigureSqlContext(builder.Configuration);
+builder.Services.AddControllers()
+    .AddApplicationPart(typeof(CompanyEmployees.Presentation.AssemblyReference)
+    .Assembly);
+
 
 
 var app = builder.Build();

@@ -1,4 +1,5 @@
 ﻿using Contracts;
+using Entities.Models;
 using Service.Contracts;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Service
 {
-    internal sealed class CompanyService : ICompanyService
+    public sealed class CompanyService : ICompanyService
     {
         private readonly IRepositoryManager _repositoryManager;
         private readonly ILoggerManager _logger;
@@ -17,6 +18,23 @@ namespace Service
         {
             _repositoryManager = repositoryManager;
             _logger = logger;
+        }
+
+        public IEnumerable<Company> GetAllCompanies(bool trackChanges)
+        {
+            try
+            {
+                var companies = _repositoryManager.CompanyRepository
+                    .GetAllCompanies(trackChanges);
+
+                return companies;
+            }
+            catch (Exception ex) 
+            {
+                _logger.LogError($"Something went wrong in the" +
+                    $" {nameof(GetAllCompanies)} service method {ex}");
+                    throw;
+            }
         }
     }
 }
