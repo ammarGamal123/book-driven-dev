@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Service
 {
-    internal sealed class EmployeeService : IEmployeeService
+    public sealed class EmployeeService : IEmployeeService
     {
         private readonly IRepositoryManager _repositoryManager;
         private readonly ILoggerManager _logger;
